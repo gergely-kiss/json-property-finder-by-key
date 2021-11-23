@@ -25,8 +25,7 @@ public class JsonObjectProcessComponent
         String jsonObject = service.getMockObject().toString();
         String keyToFind = "name";
         System.out.println("JSON: " + jsonObject);
-        JsonParser p = new JsonParser();
-        check(keyToFind, p.parse(jsonObject));
+        check(keyToFind, JsonParser.parseString(jsonObject));
         System.out.println("list size: " + list.size());
         System.out.println(list);
 
